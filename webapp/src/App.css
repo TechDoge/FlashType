@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Lexend+Exa&display=swap');
+body{
+  background: #1b2028;
+  margin: 0;
+}
+
+.logo{
+  position: absolute;
+  display: flex;
+  width: 330px;
+  top: 50px;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.bolt{
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.bolt:hover{
+  transform: rotate(-15deg);
+}
+
+.title{
+  font-family: 'Lexend Exa', sans-serif;
+  color: white;
+  font-size: 45px;
+  user-select: none;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.title:hover{
+  transform: rotate(3deg);
+}
+
+.githubLogo{
+  position: absolute;
+  top: 50px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.githubLogo:hover{
+  border-radius: 25%;
+  transform: scale(0.75);
+}
+
+@media only screen and (max-width: 650px) {
+  .githubLogo{
+    opacity: 0;
+  }
+}
+
+.typeBox{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  max-width: 900px;
+  width: 70%;
+  height: 135px;
+  transform: translate(-50%, -50%);
+  flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  user-select: none;
+}
+
+.typeBox > div{
+  font-size: 23px;
+  font-family: "Lexend Deca";
+  margin-bottom: 15px;
+  margin-right: 13px;
+  display: inline-block;
+}
+
+.typeBox > div > span{
+  color: #3d485f;
+  transition: all 0.1s ease;
+}
+
+.carot{
+  position: absolute;
+  width: 3px;
+  height: 35px;
+  background: #49577200;
+  border-radius: 5px;
+  z-index: 2;
+  animation: fadeInOut 1s ease infinite;
+  transition: all 0.1s ease;
+}
+
+@keyframes fadeInOut {
+  0%{ opacity: 0; }
+  50%{ opacity: 1; }
+  100%{ opacity: 0; }
+}
