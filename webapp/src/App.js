@@ -173,7 +173,7 @@ function App() {
           <div className="title">FlashType</div>
         </div>
 
-        <img className="githubLogo" src={githubLogo} onClick={() => {window.open("https://github.com/TechDoge/FlashTyper")}} alt="github logo" />
+        <img className="githubLogo" src={githubLogo} onClick={() => {window.open("https://github.com/TechDoge/FlashType")}} alt="github logo" />
 
         <div className="carot"></div>
       </div>
