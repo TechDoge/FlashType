@@ -121,8 +121,6 @@ function App() {
 
   let midY = 0
 
-
-
   function updateCarot() {
     let carot = document.querySelector('.carot')
     carot.style.opacity = "1"
@@ -279,6 +277,8 @@ function App() {
     startTime = 0
     timePassed = 0
     totalCharsTyped = 0
+    lastCharIndex = 0
+    midY = 0
     document.querySelector(".wpm").innerHTML = "0"
     startCarot()
     setTimeout(() => {updateCarot()}, 10)
