@@ -1,7 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Lexend+Exa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400&family=Lexend+Exa&display=swap');
 body{
   background: #1b2028;
   margin: 0;
+}
+
+.wpm{
+  position: absolute;
+  font-size: 25px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  margin-left: 60px;
+  color: #7190ff;
+  cursor: pointer;
+}
+
+.timePassed{
+  position: absolute;
+  font-size: 25px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  color: #7190ff;
+  cursor: pointer;
 }
 
 .logo{
@@ -44,12 +63,13 @@ body{
   height: 65px;
   border-radius: 50%;
   cursor: pointer;
-  transition: all 0.15s ease;
+  mix-blend-mode: normal;
+  transition: all 0.25s ease;
+  opacity: 0.85;
 }
 
 .githubLogo:hover{
-  border-radius: 25%;
-  transform: scale(0.75);
+  opacity: 1;
 }
 
 @media only screen and (max-width: 650px) {
@@ -57,6 +77,59 @@ body{
     opacity: 0;
   }
 }
+
+.end-box{
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  max-width: 700px;
+  width: 70%;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.reset-button{
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  margin-top: 8px;
+  color: white;
+  font-family: "Lexend Deca";
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 3;
+  background: rgba(160, 177, 255, 0.041);
+  transition: all 0.25s ease;
+}
+
+.reset-button:hover{
+  background: rgba(160, 177, 255, 0.1);
+}
+
+.reset-button > img{
+  width: 25px;
+  height: 28px;
+}
+
+.wpm-title, .acc-title, .time-title{
+  color: #4b5975;
+  font-size: 25px;
+  font-family: "Lexend Deca";
+}
+
+.acc-final, .wpm-final, .time-final{
+  color: #7190ff;
+  font-size: 55px;
+  font-family: "Lexend Deca";
+}
+
 
 .typeBox{
   position: absolute;
