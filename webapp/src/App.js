@@ -14,7 +14,7 @@ function App() {
   let countedChars = "abcdefghijklmnopqrstuvwxyz "
   let startTime = 0
   let timePassed = 0
-  let totalTime = 5
+  let totalTime = 30
   let totalCharsTyped = 0
 
   function toRGB(hex){
