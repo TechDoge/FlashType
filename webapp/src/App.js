@@ -3,18 +3,18 @@ import bolt from './imgs/bolt.png'
 import githubLogo from './imgs/githubLogo.png'
 import reloadIcon from "./imgs/resetLogo.png"
 import React, {useEffect, useState} from 'react'
+import randomWords from 'random-words'
 
 function App() {
 
-  let words = "the world needs more people like you due to the overwhelming percentage of fatsos living across the united states of america and this fact is not to be ignored because it is vital in order for people to learn about the true needs of our government and democracy"
-  words = words.split(" ")
+  let words = randomWords(1000)
   let wordsTyped = 0
   let currentWord = words[wordsTyped]
   let charsTyped = 0
   let countedChars = "abcdefghijklmnopqrstuvwxyz "
   let startTime = 0
   let timePassed = 0
-  let totalTime = 30
+  let totalTime = 5
   let totalCharsTyped = 0
 
   function toRGB(hex){
@@ -90,7 +90,7 @@ function App() {
         total++
       }
       document.querySelector(".acc-final").innerHTML = ""+Math.round(right/total*100)+"%"
-      document.querySelector(".time-final").innerHTML = totalTime
+      document.querySelector(".time-final").innerHTML = totalTime + "s"
     }
     alreadyPaused = true
 
@@ -248,6 +248,7 @@ function App() {
   function reset(){
     let allWords = document.querySelectorAll('.word')
     typeBox.style.opacity = "1"
+    typeBox.scrollTop = 0
     pauseIs = true
     document.querySelector(".carot").style.display = "block"
     document.querySelector(".wpm").style.display = "block"
@@ -258,8 +259,7 @@ function App() {
         allWords[i].getElementsByTagName('span')[j].style.color = startingColor
       }
     }
-    words = "the world needs more people like you due to the overwhelming percentage of fatsos living across the united states of america and this fact is not to be ignored because it is vital in order for people to learn about the true needs of our government and democracy"
-    words = words.split(" ")
+    words = randomWords(1000)
     typeBox.innerHTML = ""
     for (let i = 0; i < words.length; i++){
       let word = words[i]
@@ -281,6 +281,7 @@ function App() {
     totalCharsTyped = 0
     document.querySelector(".wpm").innerHTML = "0"
     startCarot()
+    setTimeout(() => {updateCarot()}, 10)
   }
 
   return (
